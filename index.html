@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistem Informasi Laundry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        
+        header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        h2 {
+            margin-top:10px;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 20px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        form {
+            margin-top: 15px;
+        }
+        
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 300px;
+            padding: 6px; 
+            box-sizing: border-box; 
+        }
+
+        select {
+            width: 300px;
+            padding: 6px; 
+            box-sizing: border-box;
+        }
+        
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SISTEM INFORMASI LAUNDRY</h1>
+        <p>Aplikasi Pengelola Data Laundry</p>
+    </header>
+
+    <div class="container">
+        <h2>Daftar Paket Laundry</h2>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Nama Paket</th>
+                <th>Harga / Kg</th>
+                <th>Estimasi Waktu</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Cuci Kering + Setrika</td>
+                <td>Rp 7.000</td>
+                <td>2 Hari</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cuci Kering Saja</td>
+                <td>Rp 5.000</td>
+                <td>1 Hari</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Setrika Saja</td>
+                <td>Rp 4.000</td>
+                <td>1 Hari</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Paket Kilat (Express)</td>
+                <td>Rp 12.000</td>
+                <td>6 Jam</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Input Pesanan Baru</h2>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="nama">Nama Pelanggan:</label>
+                <input type="text" id="nama" name="nama_pelanggan" class="input" required placeholder="Masukkan nama">
+            </div>
+            
+            <div class="input-group">
+                <label for="paket">Pilih Paket:</label>
+                <select id="paket" name="paket_laundry">
+                    <option value="1">Cuci Kering + Setrika</option>
+                    <option value="2">Cuci Kering Saja</option>
+                    <option value="3">Setrika Saja</option>
+                    <option value="4">Paket Kilat (Express)</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="berat">Berat (Kg):</label>
+                <input type="number" id="berat" name="berat_pakaian" min="1" class="input" required placeholder="Contoh: 1">
+            </div>
+            
+            <div class="input-group">
+                <label for="catatan">Catatan:</label>
+                <input type="text" id="catatan" name="catatan" class="input" placeholder="Contoh: jangan digabung baju putih">
+            </div>
+            
+            <button type="reset">Simpan Transaksi</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Sistem Informasi Laundry - Muhammad Fislam Firmansyah 0611</p>
+    </footer>
+</body>
+</html>
